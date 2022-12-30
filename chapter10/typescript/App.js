@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const EuropeanCoffeeMachine_1 = require("./EuropeanCoffeeMachine");
+const USApplianceAdapter_1 = require("./USApplianceAdapter");
+const USCoffeeMachine_1 = require("./USCoffeeMachine");
+let currentVolt = 220;
+console.log("--> Run EuropeanAppliance under " + currentVolt + " volt");
+let euCoffeeMachine = new EuropeanCoffeeMachine_1.EuropeanCoffeeMachine();
+euCoffeeMachine.run(currentVolt);
+console.log();
+console.log("--> Run USCoffeeMachine under " + currentVolt + " volt");
+let usCoffeeMachine = new USCoffeeMachine_1.USCoffeeMachine();
+usCoffeeMachine.run(currentVolt);
+console.log();
+console.log("--> Run USCoffeeMachine through USApplianceAdapter under " + currentVolt + " volt");
+let usCoffeeMachineAdapter = new USApplianceAdapter_1.USApplianceAdapter(usCoffeeMachine);
+usCoffeeMachineAdapter.run(currentVolt);

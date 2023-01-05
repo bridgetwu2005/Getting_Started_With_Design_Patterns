@@ -161,17 +161,17 @@ class ShoppingCart:
 
 def main():
     # initialized product
-    potatochip = PotatoChip(2)
-    springwater = SpringWater(3)
+    potato_chip = PotatoChip(2)
+    spring_water = SpringWater(3)
 
     #  ShoppingCart pay by CreditCard
     print("=== ShoppingCart pay by CreditCard ==")
     #  create a ShoppingCart
     shopping_cart_pay_by_creditcard = ShoppingCart()
     # add products to ShoppingCart
-    shopping_cart_pay_by_creditcard.add_product(potatochip)
-    shopping_cart_pay_by_creditcard.add_product(potatochip)
-    shopping_cart_pay_by_creditcard.add_product(springwater)
+    shopping_cart_pay_by_creditcard.add_product(potato_chip)
+    shopping_cart_pay_by_creditcard.add_product(potato_chip)
+    shopping_cart_pay_by_creditcard.add_product(spring_water)
     shopping_cart_pay_by_creditcard.print_product_info()
     # pay by CreditCard
     shopping_cart_pay_by_creditcard.pay("CreditCard")
@@ -182,9 +182,9 @@ def main():
     #  create a ShoppingCart
     shopping_cart_pay_by_applepay = ShoppingCart()
     # add products to ShoppingCart
-    shopping_cart_pay_by_applepay.add_product(potatochip)
-    shopping_cart_pay_by_applepay.add_product(springwater)
-    shopping_cart_pay_by_applepay.add_product(springwater)
+    shopping_cart_pay_by_applepay.add_product(potato_chip)
+    shopping_cart_pay_by_applepay.add_product(spring_water)
+    shopping_cart_pay_by_applepay.add_product(spring_water)
     shopping_cart_pay_by_applepay.print_product_info()
     # pay by ApplePay
     shopping_cart_pay_by_applepay.pay("ApplePay")

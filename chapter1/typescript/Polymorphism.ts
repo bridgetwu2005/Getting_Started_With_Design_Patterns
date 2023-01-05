@@ -3,10 +3,10 @@ import { Shape } from "./Shape";
 import { Square } from "./Square";
 
 
-// let circleShape: Shape = new Circle();
-// let squareShape: Shape = new Square();
-// circleShape.draw();
-// squareShape.draw()
+let circleShape: Shape = new Circle();
+let squareShape: Shape = new Square();
+circleShape.draw();
+squareShape.draw()
 
 
 function  add(x: string, y: string): string;

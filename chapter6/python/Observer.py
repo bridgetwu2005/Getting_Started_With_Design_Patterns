@@ -119,15 +119,15 @@ def main():
     #initial WeatherData subject
     weather = WeatherData()
     # initial HouseWeatherDataDevice Observer and register WeatherData
-    houseDeviceObserver = HouseWeatherDataDevice(weather)
+    house_device_observer = HouseWeatherDataDevice(weather)
     # initial CarWeatherDataDevice Observer and register WeatherData
-    carDeviceObserver = CarWeatherDataDevice(weather)
+    car_device_observer = CarWeatherDataDevice(weather)
     # update weather data and notify all its Observers
     weather.set_measurements(56.2, 37.02, 14)
     #update weather data and notify all its Observers
     weather.set_measurements(60.2, 32.02, 18)
     #remove CarWeatherDataDevice Observer, it will not longer get notify when weather changed
-    weather.remove_observer(carDeviceObserver)
+    weather.remove_observer(car_device_observer)
     print("Removed CarWeatherDataDevice Observer")
     #update weather data and notify all its Observers - only HouseWeatherDataDevice get notify
     weather.set_measurements(30.2, 12.02, 23)

@@ -148,7 +148,7 @@ class OrderCenter():
             command.execute()
 
 def main():
-    orderCommands = []
+    order_commands  = []
     #initial OrderMenuRequest
     order_request = OrderMenuRequest()
     # order Noodle items
@@ -159,7 +159,7 @@ def main():
     # add Noodle order to NoodleCommand
     noodle_order_command = NoodleCommand(noodle_kitchen, order_request)
     # add NoodleCommand to orderCommands list
-    orderCommands.append(noodle_order_command)
+    order_commands.append(noodle_order_command)
 
     #create SushiKitchen
     sushi_kitchen = SushiKitchen()
@@ -169,7 +169,7 @@ def main():
     # add sushi order to SushiCommand
     sushi_order_command = SushiCommand(sushi_kitchen, order_request)
     # add SushiCommand to orderCommands list
-    orderCommands.append(sushi_order_command)
+    order_commands.append(sushi_order_command)
 
     #create TempuraKitchen
     tempura_kitchen = TempuraKitchen()
@@ -178,10 +178,10 @@ def main():
     # add tempura order to TempuraCommand
     tempura_order_command = TempuraCommand(tempura_kitchen, order_request)
     # add TempuraCommand to orderCommands list
-    orderCommands.append(tempura_order_command)    
+    order_commands.append(tempura_order_command)    
 
     # send all order command to OrderCenter to execute order commands
-    orderCenter = OrderCenter(orderCommands)
+    orderCenter = OrderCenter(order_commands)
     orderCenter.execute()
 
 if __name__ == '__main__':

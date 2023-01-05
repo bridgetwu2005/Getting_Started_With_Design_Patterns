@@ -12,7 +12,7 @@ public class App {
     public static void main(String[] args) {
         System.out.println("Hello World!");
 
-        //Method overriding Runtime polymorphism example:
+        //Method overloading Runtime polymorphism example:
         System.out.println(Calculator.add(10, 5));
         System.out.println(Calculator.add(1.5, 2.3));
 
